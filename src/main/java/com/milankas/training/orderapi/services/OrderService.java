@@ -1,7 +1,7 @@
 package com.milankas.training.orderapi.services;
 
-import com.milankas.training.orderapi.dto.OrderDto;
-import com.milankas.training.orderapi.dto.patch.OrderPatchDto;
+import com.milankas.training.orderapi.dto.in.OrderDto;
+import com.milankas.training.orderapi.dto.in.patch.OrderPatchDto;
 import com.milankas.training.orderapi.mappers.AddressMapper;
 import com.milankas.training.orderapi.mappers.LineItemMapper;
 import com.milankas.training.orderapi.mappers.OrderMapper;
@@ -87,14 +87,30 @@ public class OrderService {
                 existingOrder.setEmailAddress(orderPatchDto.getEmailAddress());
             }
             if (orderPatchDto.getAddress() != null) {
-                existingOrder.getAddress().setAddressLine1(orderPatchDto.getAddress().getAddressLine1());
-                existingOrder.getAddress().setAddressLine2(orderPatchDto.getAddress().getAddressLine2());
-                existingOrder.getAddress().setContactName(orderPatchDto.getAddress().getContactName());
-                existingOrder.getAddress().setContactPhoneNumber(orderPatchDto.getAddress().getContactPhoneNumber());
-                existingOrder.getAddress().setState(orderPatchDto.getAddress().getState());
-                existingOrder.getAddress().setCity(orderPatchDto.getAddress().getCity());
-                existingOrder.getAddress().setZipCode(orderPatchDto.getAddress().getZipCode());
-                existingOrder.getAddress().setCountryCode(orderPatchDto.getAddress().getCountryCode());
+                if (orderPatchDto.getAddress().getAddressLine1() != null) {
+                    existingOrder.getAddress().setAddressLine1(orderPatchDto.getAddress().getAddressLine1());
+                }
+                if (orderPatchDto.getAddress().getAddressLine2() != null) {
+                    existingOrder.getAddress().setAddressLine2(orderPatchDto.getAddress().getAddressLine2());
+                }
+                if (orderPatchDto.getAddress().getContactName() != null) {
+                    existingOrder.getAddress().setContactName(orderPatchDto.getAddress().getContactName());
+                }
+                if (orderPatchDto.getAddress().getContactPhoneNumber() != null) {
+                    existingOrder.getAddress().setContactPhoneNumber(orderPatchDto.getAddress().getContactPhoneNumber());
+                }
+                if (orderPatchDto.getAddress().getState() != null) {
+                    existingOrder.getAddress().setState(orderPatchDto.getAddress().getState());
+                }
+                if (orderPatchDto.getAddress().getCity() != null) {
+                    existingOrder.getAddress().setCity(orderPatchDto.getAddress().getCity());
+                }
+                if (orderPatchDto.getAddress().getZipCode() != null) {
+                    existingOrder.getAddress().setZipCode(orderPatchDto.getAddress().getZipCode());
+                }
+                if (orderPatchDto.getAddress().getCountryCode() != null) {
+                    existingOrder.getAddress().setCountryCode(orderPatchDto.getAddress().getCountryCode());
+                }
             }
             if ((orderPatchDto.getLineItems() != null) && (orderPatchDto.getLineItems().size() > 0)) {
                 for(int i = (existingOrder.getLineItems().size() - 1); i >=0; i--) {

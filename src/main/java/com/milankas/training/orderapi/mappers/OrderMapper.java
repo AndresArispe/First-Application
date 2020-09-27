@@ -1,6 +1,6 @@
 package com.milankas.training.orderapi.mappers;
 
-import com.milankas.training.orderapi.dto.OrderDto;
+import com.milankas.training.orderapi.dto.in.OrderDto;
 import com.milankas.training.orderapi.persistance.model.Order;
 import org.mapstruct.Mapper;
 

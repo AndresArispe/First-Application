@@ -1,7 +1,5 @@
-package com.milankas.training.orderapi.dto;
+package com.milankas.training.orderapi.dto.in;
 
-import com.milankas.training.orderapi.persistance.model.Address;
-import com.milankas.training.orderapi.persistance.model.LineItem;
 import lombok.Getter;
 import lombok.Setter;
 

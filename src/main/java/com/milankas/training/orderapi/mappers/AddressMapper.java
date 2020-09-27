@@ -1,6 +1,6 @@
 package com.milankas.training.orderapi.mappers;
 
-import com.milankas.training.orderapi.dto.AddressDto;
+import com.milankas.training.orderapi.dto.in.AddressDto;
 import com.milankas.training.orderapi.persistance.model.Address;
 import org.mapstruct.Mapper;
 

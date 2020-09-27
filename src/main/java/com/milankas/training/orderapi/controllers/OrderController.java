@@ -1,11 +1,8 @@
 package com.milankas.training.orderapi.controllers;
 
-import com.milankas.training.orderapi.dto.OrderDto;
-import com.milankas.training.orderapi.dto.patch.OrderPatchDto;
+import com.milankas.training.orderapi.dto.in.OrderDto;
+import com.milankas.training.orderapi.dto.in.patch.OrderPatchDto;
 import com.milankas.training.orderapi.errors.ErrorResponse;
-import com.milankas.training.orderapi.persistance.repository.AddressRepository;
-import com.milankas.training.orderapi.persistance.repository.LineItemRepository;
-import com.milankas.training.orderapi.persistance.repository.OrderRepository;
 import com.milankas.training.orderapi.services.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,6 @@
-package com.milankas.training.orderapi.dto.patch;
+package com.milankas.training.orderapi.dto.in.patch;
 
-import com.milankas.training.orderapi.dto.AddressDto;
-import com.milankas.training.orderapi.dto.LineItemDto;
+import com.milankas.training.orderapi.dto.in.LineItemDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,7 +22,7 @@ public class OrderPatchDto {
     private String emailAddress;
 
     @Valid
-    private AddressDto address;
+    private AddressPatchDto address;
 
     @Valid
     private List<LineItemDto> lineItems = new ArrayList<>();

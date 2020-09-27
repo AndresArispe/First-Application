@@ -1,4 +1,4 @@
-package com.milankas.training.orderapi.dto;
+package com.milankas.training.orderapi.dto.in;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.milankas.training.orderapi.persistance.model.Order;

@@ -1,0 +1,27 @@
+version: "3"
+services:
+  springapp:
+    build: .
+    container_name: order-api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/order
+    ports:
+      - 8082:8080
+    restart: always
+    depends_on:
+      - db
+  db:
+    image: postgres:12
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=godis1first
+      - POSTGRES_DB=product
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+volumes:
+  pgdata:
